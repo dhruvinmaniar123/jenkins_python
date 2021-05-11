@@ -1,3 +1,5 @@
 #!/bin/bash
 
-echo "hello world 1123"
+_test_func(){ 
+ echo 'test'
+}
