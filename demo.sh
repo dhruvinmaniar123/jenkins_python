@@ -1,5 +1,4 @@
 #!/bin/bash
 
-_test_func(){ 
- echo 'test'
-}
+echo "Hello there!!!"
+
