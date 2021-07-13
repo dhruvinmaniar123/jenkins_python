@@ -1,0 +1,24 @@
+pipeline { 
+    agent slave-1
+    options {
+        skipStagesAfterUnstable()
+    }
+    stages {
+        stage('Build') { 
+            steps { 
+                sh 'touch demo2.sh' 
+            }
+        }
+        stage('Test'){
+            steps {
+                sh 'echo print "hell world" > demo2.sh'
+                 
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh './demo2.sh'.
+            }
+        }
+    }
+}
