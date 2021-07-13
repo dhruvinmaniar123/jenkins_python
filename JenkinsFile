@@ -11,13 +11,14 @@ pipeline {
         }
         stage('Test'){
             steps {
-                sh 'echo print "hell world" > demo2.sh'
+                sh 'echo "echo "hello world new"" > demo2.sh'
                  
             }
         }
         stage('Deploy') {
             steps {
-                sh './demo2.sh'.
+                sh 'chmod +x demo2.sh'
+                sh './demo2.sh'
             }
         }
     }
