@@ -1,3 +1,6 @@
+@Library('share-file') _
+welcomeJob ‘lambdatest’
+
 pipeline { 
     agent {label 'slave-1'}
     options {
