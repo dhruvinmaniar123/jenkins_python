@@ -16,7 +16,11 @@ pipeline {
             }
         }
         stage('Deploy') {
+	input{
+    	message "Do you want to proceed for production deployment?"
+  	}
             steps {
+		echo "Deploying and running the production"
                 sh 'chmod +x demo2.sh'
                 sh './demo2.sh'
             }
